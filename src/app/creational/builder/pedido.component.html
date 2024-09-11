@@ -1,0 +1,14 @@
+<div>
+  <h2>Pedido de Refeição</h2>
+  <button (click)="criarPedidoVegetariano()">Criar Pedido Vegetariano</button>
+  <button (click)="criarPedidoNaoVegetariano()">
+    Criar Pedido Não Vegetariano
+  </button>
+
+  <div *ngIf="pedido">
+    <h3>Pedido Completo:</h3>
+    <p>Bebida: {{ pedido?.bebida }}</p>
+    <p>Prato Principal: {{ pedido?.pratoPrincipal }}</p>
+    <p>Sobremesa: {{ pedido?.sobremesa }}</p>
+  </div>
+</div>
